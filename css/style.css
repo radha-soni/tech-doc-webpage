@@ -3,15 +3,16 @@ body {
 }
 
 nav {
+  display: flex;
   height: 50px;
   background-color: #000;
 }
 
 nav a {
-  display: inline-flex;
+  display: flex;
   height: 100%;
   align-items: center;
-  width: 100px;
+  padding: 0 30px;
   justify-content: center;
   color: #fff;
   text-decoration: none;
@@ -34,6 +35,57 @@ nav a:hover,
   width: 50px;
 }
 
+#nav-atom {
+  color: blue;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+}
+
+#search-box-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  display: inline-flex;
+  justify-content: center;
+  height: 23px;
+  background-color: #fff;
+  border-radius: 23px;
+  padding: 7px;
+}
+.search-btn {
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  color: black;
+  float: left;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: none;
+  transition: 0.4s ease-in-out;
+}
+.search-box:hover > .search-input {
+  width: 200px;
+  padding: 0 6px;
+}
+
+.search-input {
+  border: none;
+  background: none;
+  outline: none;
+  float: right;
+  padding: 0px;
+  color: black;
+  font-size: 15px;
+  transition: 0.4s;
+  line-height: 23px;
+  width: 0px;
+}
+
 @media only screen and (max-width: 720px) {
   #menu-btn {
     display: inline-block;
@@ -41,5 +93,9 @@ nav a:hover,
 
   nav a {
     display: none;
+  }
+  .search-box:hover > .search-input {
+    width: 50px;
+    padding: 0 3px;
   }
 }
