@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+nav {
+  height: 50px;
+  background-color: #000;
+}
+
+nav a {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  width: 100px;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: monospace;
+}
+
+nav a:hover,
+#menu-btn:hover {
+  background-color: #4cabff;
+  cursor: pointer;
+}
+
+#menu-btn {
+  display: none;
+  height: 100%;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  width: 50px;
+}
+
+@media only screen and (max-width: 720px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  nav a {
+    display: none;
+  }
+}
