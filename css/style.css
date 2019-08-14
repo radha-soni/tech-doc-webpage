@@ -19,11 +19,11 @@ body {
 nav {
   display: flex;
   height: 50px;
-  background-color: rgb(134, 56, 56);
+  background-color: #969088;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 nav a {
@@ -39,7 +39,8 @@ nav a {
 }
 
 nav a:hover,
-#menu-btn:hover {
+#menu-btn:hover,
+.topic-list li:hover {
   background-color: #4cabff;
   cursor: pointer;
 }
@@ -51,6 +52,7 @@ nav a:hover,
   color: #fff;
   border: none;
   width: 50px;
+  outline: none;
 }
 
 #nav-atom {
@@ -89,6 +91,10 @@ nav a:hover,
   transition: 0.4s ease-in-out;
   outline: none;
 }
+.search-btn:hover {
+  background-color: #4cabff;
+}
+
 .search-box:hover > .search-input {
   width: 200px;
   padding: 0 6px;
@@ -106,6 +112,9 @@ nav a:hover,
   line-height: 23px;
   width: 0px;
 }
+.searched-text {
+  background-color: blue;
+}
 
 #nav-link-wrapper {
   display: block;
@@ -117,11 +126,12 @@ section {
 }
 
 aside {
-  background-color: rgb(162, 150, 168);
+  background-color: #4c4848;
   flex-shrink: 0;
   position: relative;
   width: 300px;
   transition: width 0.5s;
+  z-index: 1;
 }
 aside button {
   position: absolute;
@@ -141,13 +151,14 @@ aside button {
 }
 
 aside h1 {
+  text-shadow: 2px 2px black;
   margin: 0;
   font-size: 30px;
   font-weight: 100;
   font-family: "Roboto", sans-serif;
-  color: aqua;
+  color: black;
   text-align: center;
-  background: #754b4b;
+  background: #f3efee;
   width: 100%;
   padding: 20px 0;
   overflow: hidden;
@@ -165,18 +176,21 @@ aside li {
   padding: 10px 25px;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   color: white;
 }
 
 aside a {
   text-decoration: none;
 }
+.add-hover a:hover {
+  background-color: #4cabff;
+}
 
 code {
   display: block;
   margin: 20px 0;
-  background-color: #e2e2e2;
+  background-color: black;
   padding: 25px;
   width: 100%;
 }
@@ -187,6 +201,8 @@ article {
   overflow-y: auto;
   height: calc(100vh - 50px);
   overflow-x: hidden;
+  color: black;
+  font-size: 18px;
 }
 
 article h1 {
@@ -245,8 +261,12 @@ article h1 {
   }
   aside {
     width: 0px;
+    z-index: 1;
   }
   .curtain-left {
     width: 300px;
+  }
+  article {
+    position: absolute;
   }
 }
