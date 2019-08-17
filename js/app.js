@@ -5,7 +5,10 @@ $(document).ready(function() {
     $("#nav-link-wrapper").toggleClass("curtain-down");
   });
 
-  $("#sidebar-toggle-btn").click(function() {
+  $(".topic-list").css("height", window.innerHeight - 125.45);
+  $("article").css("height", window.innerHeight - 50);
+
+  $("#sidebar-toggle-btn, .topic-list").click(function() {
     $("aside").toggleClass("curtain-left");
     $("#sidebar-toggle-chevron").toggleClass("fa-angle-left");
     $("#sidebar-toggle-chevron").toggleClass("fa-angle-right");
@@ -39,7 +42,10 @@ $(document).ready(function() {
     }
   });
 
-  $(".search-input").on("keyup click", function() {
+  $(".search-input").on("keyup click", function(e) {
+    if (e.which === 13) {
+      $(".search-btn").click();
+    }
     setTimeout(() => {
       if (prevSearchedText && !$(".search-input").val()) {
         clearSearch(

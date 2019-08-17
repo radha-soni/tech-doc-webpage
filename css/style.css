@@ -169,30 +169,27 @@ aside ul {
   padding: 0;
   margin: 0;
   overflow: auto;
-  height: calc(100vh - 139px);
+  height: calc(100vh - 125.45px);
 }
 
 aside li {
   padding: 10px 25px;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
-  /* border: 1px solid #fff; */
   color: white;
 }
 
 aside a {
   text-decoration: none;
 }
-.add-hover a:hover {
-  background-color: #4cabff;
-}
-
 code {
   display: block;
   margin: 20px 0;
-  background-color: black;
+  background-color: grey;
   padding: 25px;
   width: 100%;
+  overflow: hidden;
+  color: black;
 }
 
 article {
@@ -260,13 +257,11 @@ article h1 {
     display: block;
   }
   aside {
+    position: fixed;
     width: 0px;
     z-index: 1;
   }
   .curtain-left {
     width: 300px;
-  }
-  article {
-    position: absolute;
   }
 }
